@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
 html {
     font-size: 16px;
 }
@@ -31,23 +30,20 @@ body {
 
 .header__title {
     display: inline;
+    width: 100%;
     font-size: 1.25rem;
-    margin-left: 2rem;
+    padding-left: 1rem;
+
+
 }
 
-.main__content {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 /* Search */
 .header__search {
     display: inline;
-    margin: 0 3rem;
-    margin-top: 0.6rem;
-    padding: 0.375rem 0.75rem;
+    width: 100%;
+    margin: 1rem;
+    
 }
 .search__input {
     outline-style: none;
@@ -80,13 +76,35 @@ body {
     background: rgb(6, 76, 133);
 }
 
+@media screen and (min-width: 576px) {
+    .header__title {
+        width: auto;
+        display: inline;
+        font-size: 1.25rem;
+        margin-left: 2rem;
+    }
+    .header__search {
+        display: inline;
+        margin: 0.6rem 3rem 0 0 ;
+        padding: 0.375rem 0.75rem;
+        width: 50%;
+        max-width: 300px;
+    }
+    
+}
+
+.main__content {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 /* Aside and navbar */
 .aside__box {
     width: 20%;
     background: rgba(33, 27, 41);
 }
-
 .main__nav {
     font-size: 1.2rem;
 } 
@@ -121,13 +139,25 @@ body {
 .nav__ul li a:active {
     text-decoration: none;
     color: rgb(138, 138, 138);
-}  
+}
+@media screen and (max-width: 700px) {
+    .nav__ul li .nav__header {
+        display: none;
+    }
+    .nav__ul li .fa {
+        margin: 0;
+    }
+    .nav__ul li a span{
+        display: none;
+    } 
+}
+
 
 /* Section and content */
 .content {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     padding: 0 2rem;
 }
 .content h1 {
@@ -154,8 +184,7 @@ body {
 }
 
 .main__card {
-    width: 20%;
-    min-width: 200px;
+    width: 100%;
     text-align: left;
     margin: 1rem 0;
     border-radius: 0.25rem;
@@ -197,6 +226,18 @@ body {
     background-color: rgba(220,53,69);
 }
 
+@media screen and (min-width: 700px) {
+    .main__card {
+        width: 20%;
+        min-width: 250px;
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        padding: 0 2rem;
+    } 
+}
 
   
 
